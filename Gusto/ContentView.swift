@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Query var restaurants: [Restaurant]
+    @Environment(\.modelContext) var modelContext
     
     
     var body: some View {
@@ -53,6 +54,12 @@ struct ContentView: View {
         let c = Restaurant(name: "Pasta la Vista", priceRating: 4, qualityRating: 4, speedRating: 2)
         let d = Restaurant(name: "Life of Pie", priceRating: 3, qualityRating: 4, speedRating: 5)
         let e = Restaurant(name: "Lord of the Wings", priceRating: 5, qualityRating: 2, speedRating: 5)
+        
+        modelContext.insert(a)
+        modelContext.insert(b)
+        modelContext.insert(c)
+        modelContext.insert(d)
+        modelContext.insert(e)
     }
 }
 
