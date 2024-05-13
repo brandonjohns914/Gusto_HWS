@@ -12,9 +12,10 @@ struct ContentView: View {
     @Query var restaurants: [Restaurant]
     @Environment(\.modelContext) var modelContext
     
+    @State private var navPath = [Restaurant]()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navPath) {
             List {
                 ForEach(restaurants) { restaurant in
                     NavigationLink(value: restaurant ){
@@ -50,6 +51,9 @@ struct ContentView: View {
             }
             .toolbar {
                 Button("Add Samples", action: addSamples)
+                Button(action: addNewRestaurant) {
+                    Label("Add new restaurant" , systemImage: "plus")
+                }
             }
         }
     }
@@ -73,6 +77,13 @@ struct ContentView: View {
             let object = restaurants[item]
             modelContext.delete(object)
         }
+    }
+    
+    func addNewRestaurant() {
+        let restaurant = Restaurant(name: "New Restaurant", priceRating: 3, qualityRating: 3, speedRating: 3)
+        modelContext.insert(restaurant)
+        
+        navPath  = [restaurant]
     }
 }
 
