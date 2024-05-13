@@ -17,32 +17,37 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(restaurants) { restaurant in
-                    VStack(alignment: .leading) {
-                        Text(restaurant.name)
-                        
-                        HStack(spacing: 30) {
-                            HStack {
-                                Image(systemName: "dollarsign.circle")
-                                Text(String(restaurant.priceRating))
+                    NavigationLink(value: restaurant ){
+                        VStack(alignment: .leading) {
+                            Text(restaurant.name)
+                            
+                            HStack(spacing: 30) {
+                                HStack {
+                                    Image(systemName: "dollarsign.circle")
+                                    Text(String(restaurant.priceRating))
+                                }
+                                
+                                HStack {
+                                    Image(systemName: "hand.thumbsup")
+                                    Text(String(restaurant.qualityRating))
+                                }
+                                
+                                HStack {
+                                    Image(systemName: "bolt")
+                                    Text(String(restaurant.speedRating))
+                                }
+                                
+                                
                             }
-                            
-                            HStack {
-                                Image(systemName: "hand.thumbsup")
-                                Text(String(restaurant.qualityRating))
-                            }
-                            
-                            HStack {
-                                Image(systemName: "bolt")
-                                Text(String(restaurant.speedRating))
-                            }
-                            
-                            
                         }
                     }
                 }
                 .onDelete(perform: deleteRestaurants )
             }
             .navigationTitle("Gusto")
+            .navigationDestination(for: Restaurant.self) { restaurant in
+                EditRestaurantView(restaurant: restaurant)
+            }
             .toolbar {
                 Button("Add Samples", action: addSamples)
             }

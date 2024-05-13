@@ -12,6 +12,7 @@
 		417CE0B82BE98C790048C5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417CE0B72BE98C790048C5CB /* Assets.xcassets */; };
 		417CE0BB2BE98C790048C5CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417CE0BA2BE98C790048C5CB /* Preview Assets.xcassets */; };
 		417CE0C22BE98D8C0048C5CB /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CE0C12BE98D8C0048C5CB /* Restaurant.swift */; };
+		41D55A7E2BF2D59800263BCD /* EditRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D55A7D2BF2D59800263BCD /* EditRestaurantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		417CE0B72BE98C790048C5CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417CE0BA2BE98C790048C5CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		417CE0C12BE98D8C0048C5CB /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		41D55A7D2BF2D59800263BCD /* EditRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRestaurantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				417CE0B32BE98C780048C5CB /* GustoApp.swift */,
 				417CE0B52BE98C780048C5CB /* ContentView.swift */,
+				41D55A7D2BF2D59800263BCD /* EditRestaurantView.swift */,
 				417CE0C12BE98D8C0048C5CB /* Restaurant.swift */,
 				417CE0B72BE98C790048C5CB /* Assets.xcassets */,
 				417CE0B92BE98C790048C5CB /* Preview Content */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417CE0B62BE98C780048C5CB /* ContentView.swift in Sources */,
+				41D55A7E2BF2D59800263BCD /* EditRestaurantView.swift in Sources */,
 				417CE0B42BE98C780048C5CB /* GustoApp.swift in Sources */,
 				417CE0C22BE98D8C0048C5CB /* Restaurant.swift in Sources */,
 			);
