@@ -40,6 +40,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteRestaurants )
             }
             .navigationTitle("Gusto")
             .toolbar {
@@ -60,6 +61,13 @@ struct ContentView: View {
         modelContext.insert(c)
         modelContext.insert(d)
         modelContext.insert(e)
+    }
+    
+    func deleteRestaurants( _ indexSet: IndexSet) {
+        for item in indexSet {
+            let object = restaurants[item]
+            modelContext.delete(object)
+        }
     }
 }
 
